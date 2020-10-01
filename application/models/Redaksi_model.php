@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Berita_model extends CI_Model
+class Redaksi_model extends CI_Model
 {
 
 	// Load database
@@ -14,7 +14,7 @@ class Berita_model extends CI_Model
 	//Listing
 	public function listing()
 	{
-		$this->db->select('redaksi.*, kategori_redaksi.nama_kategori_redaksi, users.nama');
+		$this->db->select('redaksi.*, kategori_redaksi.nama_redaksi, users.nama');
 		$this->db->from('redaksi');
 		// Join
 		$this->db->join('kategori_redaksi', 'kategori_redaksi.id_kategori_redaksi = redaksi.id_kategori_redaksi', 'LEFT');
@@ -28,7 +28,7 @@ class Berita_model extends CI_Model
 	//Read
 	public function read($slug_redaksi)
 	{
-		$this->db->select('redaksi.*, kategori_redaksi.nama_kategori_redaksi, users.nama');
+		$this->db->select('redaksi.*, kategori_redaksi.nama_redaksi, users.nama');
 		$this->db->from('redaksi');
 		// Join
 		$this->db->join('kategori_redaksi', 'kategori_redaksi.id_kategori_redaksi = redaksi.id_kategori_redaksi', 'LEFT');
@@ -43,7 +43,7 @@ class Berita_model extends CI_Model
 	//Kategori
 	public function kategori($id_kategori_redaksi)
 	{
-		$this->db->select('redaksi.*, kategori_redaksi.nama_kategori_redaksi, users.nama');
+		$this->db->select('redaksi.*, kategori_redaksi.nama_redaksi, users.nama');
 		$this->db->from('redaksi');
 		// Join
 		$this->db->join('kategori_redaksi', 'kategori_redaksi.id_kategori_redaksi = redaksi.id_kategori_redaksi', 'LEFT');
@@ -91,7 +91,7 @@ class Berita_model extends CI_Model
 	// Delete
 	public function delete($data)
 	{
-		$this->db->where('id_berita', $data['id_berita']);
-		$this->db->delete('berita', $data);
+		$this->db->where('id_redaksi', $data['id_redaksi']);
+		$this->db->delete('redaksi', $data);
 	}
 }

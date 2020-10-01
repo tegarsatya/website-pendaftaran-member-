@@ -154,7 +154,7 @@ class Redaksi extends CI_Controller {
 					$data = array(
 						'title'				=> 'Edit berita',
 						'kategori_redaksi'	=> $kategori,
-						'berita'			=> $redaksi,
+						'redaksi'			=> $redaksi,
 						'error'				=> $this->upload->display_errors(),
 						'isi'				=> 'admin/redaksi/edit'
 					);
@@ -184,10 +184,10 @@ class Redaksi extends CI_Controller {
 						'id_user'				=> $this->session->userdata('id_user'),
 						'id_kategori_redaksi'	=> $i->post('id_kategori_redaksi'),
 						'slug_redaksi'			=> url_title($i->post('nama_redaksi'), 'dash', TRUE),
-						'nama_redaksi'			=> $i->post('nama_berita'),
-						'isi'					=> $i->post('isi'),
+						'nama_redaksi'			=> $i->post('nama_redaksi'),
+						'keterangan'			=> $i->post('keterangan'),
 						'status_redaksi'		=> $i->post('status_redaksi'),
-						'gambar'				=> $upload_data['uploads']['file_name']
+						'gambar'				=> $upload_data['uploads']['file_name'],
 					);
 					$this->redaksi_model->edit($data);
 					$this->session->set_flashdata('sukses', 'redaksi telah diedit');
@@ -201,10 +201,10 @@ class Redaksi extends CI_Controller {
 					'id_user'				=> $this->session->userdata('id_user'),
 					'id_kategori_redaksi'	=> $i->post('id_kategori_redaksi'),
 					'slug_redaksi'			=> url_title($i->post('nama_redaksi'), 'dash', TRUE),
-					'nama_redaksi'			=> $i->post('nama_berita'),
-					'isi'					=> $i->post('isi'),
+					'nama_redaksi'			=> $i->post('nama_redaksi'),
+					'keterangan'			=> $i->post('keterangan'),
 					'status_redaksi'		=> $i->post('status_redaksi'),
-					'gambar'				=> $upload_data['uploads']['file_name']
+					// 'gambar'				=> $upload_data['uploads']['file_name'],
 				);
 				$this->redaksi_model->edit($data);
 				$this->session->set_flashdata('sukses', 'redaksi telah diedit');
@@ -215,8 +215,7 @@ class Redaksi extends CI_Controller {
 		$data = array(
 			'title'				=> 'Edit berita',
 			'kategori_redaksi'	=> $kategori,
-			'berita'			=> $redaksi,
-			'error'				=> $this->upload->display_errors(),
+			'redaksi'			=> $redaksi,
 			'isi'				=> 'admin/redaksi/edit'
 		);
 		$this->load->view('admin/layout/wrapper', $data);
