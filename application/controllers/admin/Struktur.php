@@ -85,6 +85,7 @@ class Struktur extends CI_Controller
 				$data = array(
 
 					'keterangan'			=> $i->post('keterangan'),
+					'nama'					=> $i->post('nama'),
 					'gambar'				=> $upload_data['uploads']['file_name'],
 				);
 
@@ -159,6 +160,7 @@ class Struktur extends CI_Controller
 
 					$data = array(
 						'id_struktur'			=> $id_struktur,
+						'nama'					=> $i->post('nama'),
 						'keterangan'			=> $i->post('keterangan'),
 						'gambar'				=> $upload_data['uploads']['file_name'],
 					);
@@ -171,6 +173,7 @@ class Struktur extends CI_Controller
 
 				$data = array(
 					'id_struktur'			=> $id_struktur,
+					'nama'					=> $i->post('nama'),
 					'keterangan'			=> $i->post('keterangan'),
 					'gambar'				=> $upload_data['uploads']['file_name'],
 				);

@@ -27,6 +27,7 @@ echo form_open(base_url('admin/profile/proses'));
 						<tr>
 							<th>NO</th>
 							<th>Keterangan Struktur Organisasi</th>
+							<th>Nama</th>
 							<th>Gambar</th>
 							<th>ACTION</th>
 						</tr>
@@ -43,6 +44,7 @@ echo form_open(base_url('admin/profile/proses'));
 									<input type="checkbox" name="id_struktur[]" value="<?php echo $profile->id_struktur ?>">
 								</td>
 								<td><?php echo $profile->keterangan ?></td>
+								<td><?php echo $profile->nama?></td>
 								<td>
 									<img src="<?php echo base_url('assets/upload/struktur/' . $profile->gambar) ?>" class="img img-responsive" width="60">
 								</td>

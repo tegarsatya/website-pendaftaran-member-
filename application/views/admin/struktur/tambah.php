@@ -46,10 +46,17 @@ echo form_open_multipart('admin/struktur/tambah');
 		</div>
 		<div class="card-body">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-6">
 					<div class="form-group">
 						<label>Upload gambar</label>
 						<input type="file" name="gambar" class="form-control">
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Nama Anggota <span class="text-danger">*</span></label>
+						<input type="text" name="nama" class="form-control form-control-lg" value="<?php echo set_value('nama') ?>" placeholder="Nama" required>
 					</div>
 				</div>
 
@@ -60,6 +67,9 @@ echo form_open_multipart('admin/struktur/tambah');
 					</div>
 				</div>
 			</div>
+
+
+
 
 			<div class="col-md-12">
 				<div class="form-group">
