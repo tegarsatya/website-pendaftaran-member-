@@ -9,7 +9,8 @@
  			<div class="sidebar-brand-icon rotate-n-15">
  				<i class="fas fa-laugh-wink"></i>
  			</div>
- 			<div class="sidebar-brand-text mx-3">SB Admin <sup>Honda Jazz</p></div>
+ 			<div class="sidebar-brand-text mx-3">SB Admin <sup>Honda Jazz</p>
+ 			</div>
  		</a>
 
  		<!-- Divider -->
@@ -23,7 +24,7 @@
  		</li>
 
 
-		 <!-- Data pengguna Sistem -->
+ 		<!-- Data pengguna Sistem -->
  		<hr class="sidebar-divider">
 
  		<!-- Heading -->
@@ -46,7 +47,7 @@
  			</div>
  		</li>
 
-		 <!-- Data Berita dan Kategori Berita -->
+ 		<!-- Data Berita dan Kategori Berita -->
 
  		<hr class="sidebar-divider">
 
@@ -75,7 +76,7 @@
 
  		<!-- Heading -->
  		<div class="sidebar-heading">
- 			Data Profil 
+ 			Data Profil
  		</div>
 
  		<!-- Nav Item - Pages Collapse Menu -->
@@ -137,10 +138,10 @@
  					<a class="collapse-item" href="<?= base_url('admin/struktur/tambah') ?>">Tambah Data Struktur</a>
  				</div>
  			</div>
-		 </li>
-		 
+ 		</li>
 
-		 <!-- Penerimaan siswa -->
+
+ 		<!-- Penerimaan siswa -->
  		<hr class="sidebar-divider">
 
  		<!-- Heading -->
@@ -162,6 +163,30 @@
  				</div>
  			</div>
  		</li>
+
+ 		<!-- Penerimaan siswa -->
+ 		<hr class="sidebar-divider">
+
+ 		<!-- Heading -->
+ 		<div class="sidebar-heading">
+ 			Data Kegiatan Komunitas
+ 		</div>
+
+ 		<!-- Nav Item - Utilities Collapse Menu -->
+ 		<li class="nav-item">
+ 			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#opp" aria-expanded="true" aria-controls="collapseUtilities">
+ 				<i class="fas fa-fw fa-wrench"></i>
+ 				<span>Kegiatan</span>
+ 			</a>
+ 			<div id="opp" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+ 				<div class="bg-white py-2 collapse-inner rounded">
+ 					<h6 class="collapse-header">Galeri</h6>
+ 					<a class="collapse-item" href="<?= base_url('admin/kegiatan') ?>">Data Kegiatan</a>
+ 					<a class="collapse-item" href="<?= base_url('admin/kegiatan/tambah') ?>">Tambah Data Kegiatan</a>
+ 				</div>
+ 			</div>
+ 		</li>
+
 
  		<!-- Divider -->
  		<hr class="sidebar-divider d-none d-md-block">
