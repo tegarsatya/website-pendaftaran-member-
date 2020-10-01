@@ -91,6 +91,31 @@
  			</div>
  		</li>
 
+ 		<!-- Data Berita dan Kategori Berita -->
+
+ 		<hr class="sidebar-divider">
+
+ 		<!-- Heading -->
+ 		<div class="sidebar-heading">
+ 			Data Redaksi & Kategori Redaksi
+ 		</div>
+
+ 		<!-- Nav Item - Utilities Collapse Menu -->
+ 		<li class="nav-item">
+ 			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#redaksi" aria-expanded="true" aria-controls="collapseUtilities">
+ 				<i class="fas fa-fw fa-wrench"></i>
+ 				<span>Redaksi </span>
+ 			</a>
+ 			<div id="redaksi" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+ 				<div class="bg-white py-2 collapse-inner rounded">
+ 					<h6 class="collapse-header">Berita & Kategori Berita:</h6>
+ 					<a class="collapse-item" href="<?= base_url('admin/redaksi') ?>">Data Redaksi</a>
+ 					<a class="collapse-item" href="<?= base_url('admin/redaksi/tambah') ?>">Tambah Data Redaksi</a>
+ 					<a class="collapse-item" href="<?= base_url('admin/kategori') ?>">Data Kategori</a>
+ 					<a class="collapse-item" href="<?= base_url('admin/kategori/tambah') ?>">Tambah Data Kategori</a>
+ 				</div>
+ 			</div>
+ 		</li>
 
  		<!-- Penerimaan siswa -->
  		<hr class="sidebar-divider">
@@ -125,11 +150,11 @@
 
  		<!-- Nav Item - Pages Collapse Menu -->
  		<li class="nav-item">
- 			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+ 			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#c" aria-expanded="true" aria-controls="collapseTwo">
  				<i class="fas fa-fw fa-cog"></i>
  				<span>Pendaftaran Member</span>
  			</a>
- 			<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+ 			<div id="c" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
  				<div class="bg-white py-2 collapse-inner rounded">
  					<h6 class="collapse-header">Pendaftaran :</h6>
  					<a class="collapse-item" href="<?= base_url('admin/Pendaftaran') ?>">Pendaftaran </a>
