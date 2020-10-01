@@ -22,55 +22,6 @@
  				<i class="fas fa-fw fa-tachometer-alt"></i>
  				<span>Dashboard</span></a>
  		</li>
-
-
- 		<!-- Data pengguna Sistem -->
- 		<hr class="sidebar-divider">
-
- 		<!-- Heading -->
- 		<div class="sidebar-heading">
- 			Data Admin
- 		</div>
-
- 		<!-- Nav Item - Pages Collapse Menu -->
- 		<li class="nav-item">
- 			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
- 				<i class="fas fa-fw fa-cog"></i>
- 				<span>Pengguna Sistem</span>
- 			</a>
- 			<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
- 				<div class="bg-white py-2 collapse-inner rounded">
- 					<h6 class="collapse-header">Data Pengguna Sistem :</h6>
- 					<a class="collapse-item" href="<?= base_url('admin/user') ?>">Pengguna Sistem </a>
- 					<a class="collapse-item" href="<?= base_url('admin/user/tambah') ?>">Tambah Pengguna Sistem</a>
- 				</div>
- 			</div>
- 		</li>
-
- 		<!-- Data Berita dan Kategori Berita -->
-
- 		<hr class="sidebar-divider">
-
- 		<!-- Heading -->
- 		<div class="sidebar-heading">
- 			Data Portofolio
- 		</div>
-
- 		<!-- Nav Item - Utilities Collapse Menu -->
- 		<li class="nav-item">
- 			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
- 				<i class="fas fa-fw fa-wrench"></i>
- 				<span>Portofolio</span>
- 			</a>
- 			<div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
- 				<div class="bg-white py-2 collapse-inner rounded">
- 					<h6 class="collapse-header">Data Portofolio :</h6>
- 					<a class="collapse-item" href="<?= base_url('admin/portofolio') ?>">Data Portofolio</a>
- 					<a class="collapse-item" href="<?= base_url('admin/portofolio/tambah') ?>">Tambah Data Portofolio</a>
- 				</div>
- 			</div>
- 		</li>
-
  		<!-- DAta Profil sekolah -->
  		<hr class="sidebar-divider">
 
@@ -183,6 +134,72 @@
  					<h6 class="collapse-header">Galeri</h6>
  					<a class="collapse-item" href="<?= base_url('admin/kegiatan') ?>">Data Kegiatan</a>
  					<a class="collapse-item" href="<?= base_url('admin/kegiatan/tambah') ?>">Tambah Data Kegiatan</a>
+ 				</div>
+ 			</div>
+ 		</li>
+
+ 		<!-- Heading -->
+ 		<div class="sidebar-heading">
+ 			Data Yang Menghubungi
+ 		</div>
+
+ 		<!-- Nav Item - Utilities Collapse Menu -->
+ 		<li class="nav-item">
+ 			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#hu" aria-expanded="true" aria-controls="collapseUtilities">
+ 				<i class="fas fa-fw fa-wrench"></i>
+ 				<span>Hubungi</span>
+ 			</a>
+ 			<div id="hu" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+ 				<div class="bg-white py-2 collapse-inner rounded">
+ 					<h6 class="collapse-header">Kontak</h6>
+ 					<a class="collapse-item" href="<?= base_url('admin/kontak') ?>">Data Kontak</a>
+ 				</div>
+ 			</div>
+ 		</li>
+
+ 		<!-- Data pengguna Sistem -->
+ 		<hr class="sidebar-divider">
+
+ 		<!-- Heading -->
+ 		<div class="sidebar-heading">
+ 			Data Admin
+ 		</div>
+
+ 		<!-- Nav Item - Pages Collapse Menu -->
+ 		<li class="nav-item">
+ 			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+ 				<i class="fas fa-fw fa-cog"></i>
+ 				<span>Pengguna Sistem</span>
+ 			</a>
+ 			<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+ 				<div class="bg-white py-2 collapse-inner rounded">
+ 					<h6 class="collapse-header">Data Pengguna Sistem :</h6>
+ 					<a class="collapse-item" href="<?= base_url('admin/user') ?>">Pengguna Sistem </a>
+ 					<a class="collapse-item" href="<?= base_url('admin/user/tambah') ?>">Tambah Pengguna Sistem</a>
+ 				</div>
+ 			</div>
+ 		</li>
+
+ 		<!-- Data Berita dan Kategori Berita -->
+
+ 		<hr class="sidebar-divider">
+
+ 		<!-- Heading -->
+ 		<div class="sidebar-heading">
+ 			Data Portofolio
+ 		</div>
+
+ 		<!-- Nav Item - Utilities Collapse Menu -->
+ 		<li class="nav-item">
+ 			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+ 				<i class="fas fa-fw fa-wrench"></i>
+ 				<span>Portofolio</span>
+ 			</a>
+ 			<div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+ 				<div class="bg-white py-2 collapse-inner rounded">
+ 					<h6 class="collapse-header">Data Portofolio :</h6>
+ 					<a class="collapse-item" href="<?= base_url('admin/portofolio') ?>">Data Portofolio</a>
+ 					<a class="collapse-item" href="<?= base_url('admin/portofolio/tambah') ?>">Tambah Data Portofolio</a>
  				</div>
  			</div>
  		</li>
