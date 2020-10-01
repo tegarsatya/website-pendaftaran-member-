@@ -9,7 +9,7 @@
  			<div class="sidebar-brand-icon rotate-n-15">
  				<i class="fas fa-laugh-wink"></i>
  			</div>
- 			<div class="sidebar-brand-text mx-3">SB Admin <sup>Banjarwangi-1</sup></div>
+ 			<div class="sidebar-brand-text mx-3">SB Admin <sup>Honda Jazz</p></div>
  		</a>
 
  		<!-- Divider -->
@@ -75,7 +75,7 @@
 
  		<!-- Heading -->
  		<div class="sidebar-heading">
- 			Data Profil Sekolahan
+ 			Data Profil 
  		</div>
 
  		<!-- Nav Item - Pages Collapse Menu -->
@@ -92,28 +92,6 @@
  			</div>
  		</li>
 
- 		<!-- Visi Misi -->
- 		<hr class="sidebar-divider">
-
- 		<!-- Heading -->
- 		<div class="sidebar-heading">
- 			Data Visi & Misi Sekolahan
- 		</div>
-
- 		<!-- Nav Item - Utilities Collapse Menu -->
- 		<li class="nav-item">
- 			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMisi" aria-expanded="true" aria-controls="collapseUtilities">
- 				<i class="fas fa-fw fa-wrench"></i>
- 				<span>Data Visi & Misi</span>
- 			</a>
- 			<div id="collapseMisi" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
- 				<div class="bg-white py-2 collapse-inner rounded">
- 					<h6 class="collapse-header">Visi & Misi</h6>
- 					<a class="collapse-item" href="<?= base_url('admin/visi_misi') ?>">Data Visi & Misi</a>
- 					<a class="collapse-item" href="<?= base_url('admin/visi_misi/tambah') ?>">Tambah Data Visi & Misi</a>
- 				</div>
- 			</div>
- 		</li>
 
  		<!-- galeri -->
  		<hr class="sidebar-divider">
@@ -143,20 +121,20 @@
 
  		<!-- Heading -->
  		<div class="sidebar-heading">
- 			Data Pengajar
+ 			Struktur Organisasi Komunitas
  		</div>
 
  		<!-- Nav Item - Utilities Collapse Menu -->
  		<li class="nav-item">
  			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsepa" aria-expanded="true" aria-controls="collapseUtilities">
  				<i class="fas fa-fw fa-wrench"></i>
- 				<span>Data Pengajar</span>
+ 				<span>Data Struktur</span>
  			</a>
  			<div id="collapsepa" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
  				<div class="bg-white py-2 collapse-inner rounded">
  					<h6 class="collapse-header">Galeri</h6>
- 					<a class="collapse-item" href="<?= base_url('admin/pengajar') ?>">Data Pengajar</a>
- 					<a class="collapse-item" href="<?= base_url('admin/pengajar/tambah') ?>">Tambah Data Pengajar</a>
+ 					<a class="collapse-item" href="<?= base_url('admin/struktur') ?>">Data Struktur</a>
+ 					<a class="collapse-item" href="<?= base_url('admin/struktur/tambah') ?>">Tambah Data Struktur</a>
  				</div>
  			</div>
 		 </li>
@@ -167,49 +145,22 @@
 
  		<!-- Heading -->
  		<div class="sidebar-heading">
- 			Data Syarat Penerimaan Siswa Baru
+ 			Data Video Komunitas
  		</div>
 
  		<!-- Nav Item - Utilities Collapse Menu -->
  		<li class="nav-item">
  			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#opps" aria-expanded="true" aria-controls="collapseUtilities">
  				<i class="fas fa-fw fa-wrench"></i>
- 				<span>Penerimaan siswa</span>
+ 				<span>Video</span>
  			</a>
  			<div id="opps" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
  				<div class="bg-white py-2 collapse-inner rounded">
  					<h6 class="collapse-header">Galeri</h6>
- 					<a class="collapse-item" href="<?= base_url('admin/penerimaan') ?>">Data Penerimaan</a>
- 					<a class="collapse-item" href="<?= base_url('admin/pengajar/tambah') ?>">Tambah Data penerimaan</a>
+ 					<a class="collapse-item" href="<?= base_url('admin/video') ?>">Data Video</a>
+ 					<a class="collapse-item" href="<?= base_url('admin/video/tambah') ?>">Tambah Data Video</a>
  				</div>
  			</div>
- 		</li>
-
-
- 		<!-- Heading -->
- 		<div class="sidebar-heading">
- 			Data Buku Tamu
- 		</div>
-
- 		<!-- Nav Item - Utilities Collapse Menu -->
- 		<li class="nav-item">
- 			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsea" aria-expanded="true" aria-controls="collapseUtilities">
- 				<i class="fas fa-fw fa-wrench"></i>
- 				<span>Data Buku Tamu</span>
- 			</a>
- 			<div id="collapsea" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
- 				<div class="bg-white py-2 collapse-inner rounded">
- 					<h6 class="collapse-header">Galeri</h6>
- 					<a class="collapse-item" href="<?= base_url('admin/buku_tamu') ?>">Data Buku Tamu</a>
- 				</div>
- 			</div>
- 		</li>
-
- 		<!-- Nav Item - Tables -->
- 		<li class="nav-item active">
- 			<a class="nav-link" href="tables.html">
- 				<i class="fas fa-fw fa-table"></i>
- 				<span>Tables</span></a>
  		</li>
 
  		<!-- Divider -->
