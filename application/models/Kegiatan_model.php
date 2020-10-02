@@ -19,15 +19,16 @@ class Kegiatan_model extends CI_Model {
 		return $query->result();
 	}
 
-	// // Read data
-	// public function read($id_struktur)
-	// {
-	// 	$this->db->select('*');
-	// 	$this->db->from('profil');
-	// 	$this->db->order_by('id_profil');
-	// 	$query = $this->db->get();
-	// 	return $query->row();
-	// }
+	// Read data
+	public function read($id_kegiatan)
+	{
+		$this->db->select('*');
+		$this->db->from('kegiatan');
+		$this->db->where('id_kegiatan', $id_kegiatan);
+		$this->db->order_by('id_kegiatan', 'DESC');
+		$query = $this->db->get();
+		return $query->row();
+	}
 
 	// Tambah
 	public function tambah($data)

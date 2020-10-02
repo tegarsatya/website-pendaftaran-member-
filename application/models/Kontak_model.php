@@ -27,6 +27,12 @@ class Kontak_model extends CI_Model {
 		$this->db->delete('kontak', $data);
 	}
 
+	// insert data
+	function insert($data)
+	{
+		$this->db->insert($this->table, $data);
+	}
+
 }
 
 /* End of file Kontak_model.php */

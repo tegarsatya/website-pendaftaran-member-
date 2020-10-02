@@ -12,7 +12,7 @@
 
 		<div class="collapse navbar-collapse navbar-right">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="<?php echo base_url('home') ?>">Home</a></li>
+				<li><a href="<?php echo base_url('home') ?>">Home</a></li>
 				<li><a href="<?php echo base_url('profil') ?>">Profil</a></li>
 				<li><a href="<?php echo base_url('struktur') ?>">Struktur</a></li>
 				<li><a href="<?php echo base_url('kegiatan') ?>">Kegiatan</a></li>
@@ -25,7 +25,8 @@
 				</li>
 				<li><a href="<?php echo base_url('redaksi') ?>">Redaksi</a></li>
 				<li><a href="<?php echo base_url('kontak') ?>">Hubungi</a></li>
-				<li><a href="<?php echo base_url('login') ?>">Login</a></li>
+				<li><a href="<?php echo base_url('pendaftaran') ?>">Pendaftaran</a></li>
+				<li class="active"><a href="<?php echo base_url('login') ?>">Login</a></li>
 			</ul>
 		</div>
 	</div>

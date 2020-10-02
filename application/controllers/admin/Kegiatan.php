@@ -189,7 +189,6 @@ class Kegiatan extends CI_Controller {
 					'id_kegiatan'			=> $id_kegiatan,
 					'judul_kegiatan'		=> $i->post('judul_kegiatan'),
 					'keterangan'			=> $i->post('keterangan'),
-					'gambar'				=> $upload_data['uploads']['file_name'],
 				);
 				$this->kegiatan_model->edit($data);
 				$this->session->set_flashdata('sukses', 'Data telah diedit');
