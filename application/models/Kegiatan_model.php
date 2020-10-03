@@ -19,6 +19,28 @@ class Kegiatan_model extends CI_Model {
 		return $query->result();
 	}
 
+	// kegiatan
+	public function kegiatan($limit, $start)
+	{
+		$this->db->select('*');
+		$this->db->from('kegiatan');
+		$this->db->order_by('id_kegiatan');
+		$this->db->limit($limit, $start);
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	// total
+	public function total()
+	{
+		$this->db->select('*');
+		$this->db->from('kegiatan');
+		$this->db->order_by('id_kegiatan');
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+
 	// Read data
 	public function read($id_kegiatan)
 	{

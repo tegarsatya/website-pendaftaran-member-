@@ -34,7 +34,7 @@ class Redaksi_model extends CI_Model
 		$this->db->join('kategori_redaksi', 'kategori_redaksi.id_kategori_redaksi = redaksi.id_kategori_redaksi', 'LEFT');
 		$this->db->join('users', 'users.id_user = redaksi.id_user', 'LEFT');
 		// End join
-		$this->db->where('slug_redaksi', $slug_redaksi);
+		$this->db->where('slug_redaksi',$slug_redaksi);
 		$this->db->order_by('id_redaksi', 'DESC');
 		$query = $this->db->get();
 		return $query->row();
@@ -58,6 +58,9 @@ class Redaksi_model extends CI_Model
 	//Home
 	public function home()
 	{
+		$this->db->select('redaksi.*, kategori_redaksi.nama_redaksi, users.nama');
+		$this->db->from('redaksi');
+
 		$this->db->join('kategori_redaksi', 'kategori_redaksi.id_kategori_redaksi = redaksi.id_kategori_redaksi', 'LEFT');
 		$this->db->join('users', 'users.id_user = redaksi.id_user', 'LEFT');
 		// End join
@@ -66,6 +69,40 @@ class Redaksi_model extends CI_Model
 		$this->db->limit(6);
 		$query = $this->db->get();
 		return $query->result();
+	}
+
+
+	//Home
+	public function redaksi($limit, $start)
+	{
+		$this->db->select('redaksi.*, kategori_redaksi.nama_redaksi, users.nama');
+		$this->db->from('redaksi');
+
+		$this->db->join('kategori_redaksi', 'kategori_redaksi.id_kategori_redaksi = redaksi.id_kategori_redaksi', 'LEFT');
+		$this->db->join('users', 'users.id_user = redaksi.id_user', 'LEFT');
+		// End join
+		$this->db->where('redaksi.status_redaksi', 'Publish');
+		$this->db->order_by('id_redaksi', 'DESC');
+		$this->db->limit($limit, $start);
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	
+	//Home
+	public function total()
+	{
+		$this->db->select('redaksi.*, kategori_redaksi.nama_redaksi, users.nama');
+		$this->db->from('redaksi');
+
+		$this->db->join('kategori_redaksi', 'kategori_redaksi.id_kategori_redaksi = redaksi.id_kategori_redaksi', 'LEFT');
+		$this->db->join('users', 'users.id_user = redaksi.id_user', 'LEFT');
+		// End join
+		$this->db->where('redaksi.status_redaksi', 'Publish');
+		$this->db->order_by('id_redaksi', 'DESC');
+		$query = $this->db->get();
+		return $query->result();
+		
 	}
 
 	// detail perberita

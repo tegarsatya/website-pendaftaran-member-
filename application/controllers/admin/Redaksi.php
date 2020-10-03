@@ -204,7 +204,7 @@ class Redaksi extends CI_Controller {
 					'nama_redaksi'			=> $i->post('nama_redaksi'),
 					'keterangan'			=> $i->post('keterangan'),
 					'status_redaksi'		=> $i->post('status_redaksi'),
-					// 'gambar'				=> $upload_data['uploads']['file_name'],
+					'gambar'				=> $upload_data['uploads']['file_name'],
 				);
 				$this->redaksi_model->edit($data);
 				$this->session->set_flashdata('sukses', 'redaksi telah diedit');
