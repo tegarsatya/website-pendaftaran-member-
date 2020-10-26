@@ -103,7 +103,7 @@ class Redaksi extends CI_Controller {
 				);
 
 				$this->redaksi_model->tambah($data);
-				$this->session->set_flashdata('sukses', 'Redaksi telah ditambah');
+				$this->session->set_flashdata('sukses', 'data Redaksi telah ditambahkan');
 				redirect(base_url('admin/redaksi'));
 			}
 		}
@@ -213,7 +213,7 @@ class Redaksi extends CI_Controller {
 		}
 		// End masuk database
 		$data = array(
-			'title'				=> 'Edit berita',
+			'title'				=> 'Edit Redaksi',
 			'kategori_redaksi'	=> $kategori,
 			'redaksi'			=> $redaksi,
 			'isi'				=> 'admin/redaksi/edit'
@@ -227,7 +227,7 @@ class Redaksi extends CI_Controller {
 	{
 		$data = array('id_redaksi'	=> $id_redaksi);
 		$this->redaksi_model->delete($data);
-		$this->session->set_flashdata('sukses', 'Data telah di delete');
+		$this->session->set_flashdata('sukses', 'Data telah di hapus');
 		redirect(base_url('admin/redaksi'));
 	}
 

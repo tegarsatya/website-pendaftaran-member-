@@ -67,6 +67,7 @@ class Simple_login
 		$this->CI->session->set_flashdata('sukses', 'Terimakasih, Anda berhasil logout');
 		redirect(base_url() . 'login');
 	}
+	
 	// Fungsi check login: seseorang sudah login atau belum
 	public function check_login($pengalihan)
 	{

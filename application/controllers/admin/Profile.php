@@ -37,13 +37,11 @@ class Profile extends CI_Controller {
 
 		// Validasi
 		$v = $this->form_validation;
-
-
 		$v->set_rules(
 			'isi',
 			'isi profil',
 			'required',
-			array('required'		=> 'isi berita harus diisi')
+			array('required'		=> 'Keterangan berita harus diisi')
 		);
 
 		if ($v->run()) {
@@ -89,7 +87,7 @@ class Profile extends CI_Controller {
 				);
 
 				$this->profil_model->tambah($data);
-				$this->session->set_flashdata('sukses', 'Berita telah ditambah');
+				$this->session->set_flashdata('sukses', 'data profil telah ditambahkan');
 				redirect(base_url('admin/profile'));
 			}
 		}
@@ -104,7 +102,7 @@ class Profile extends CI_Controller {
 		$this->load->view('admin/layout/wrapper', $data);
 	}
 
-	// Edit galeri
+	// Edit Profil
 	public function edit($id_profil)
 	{
 		$profil		 	= $this->profil_model->detail($id_profil);
@@ -155,16 +153,7 @@ class Profile extends CI_Controller {
 					$this->load->library('image_lib', $config);
 					$this->image_lib->resize();
 
-					// Proses hapus gambar
-					// if ($galeri->gambar != "") {
-					// 	unlink('./assets/upload/' . $galeri->gambar);
-					// 	unlink('./assets/upload/galeri/' . $galeri->gambar);
-
-					// }
-					// End hapus gambar
-
 					$i 		= $this->input;
-
 					$data = array(
 						'id_user'				=> $this->session->userdata('id_user'),
 						'id_profil'				=> $id_profil,
@@ -184,7 +173,7 @@ class Profile extends CI_Controller {
 					'isi'					=> $i->post('isi'),
 				);
 				$this->profil_model->edit($data);
-				$this->session->set_flashdata('sukses', 'Data telah diedit');
+				$this->session->set_flashdata('sukses', 'Data profil telah diedit');
 				redirect(base_url('admin/profile'), 'refresh');
 			}
 		}
@@ -204,7 +193,7 @@ class Profile extends CI_Controller {
 
 		$data = array('id_profil'	=> $id_profil);
 		$this->profil_model->delete($data);
-		$this->session->set_flashdata('sukses', 'Data Profil telah didelete');
+		$this->session->set_flashdata('sukses', 'Data Profil telah di hapus');
 		redirect(base_url('admin/Profile'));
 	}
 

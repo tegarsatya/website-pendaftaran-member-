@@ -46,7 +46,9 @@ class Kegiatan_model extends CI_Model {
 	{
 		$this->db->select('*');
 		$this->db->from('kegiatan');
-		$this->db->where('id_kegiatan', $id_kegiatan);
+		$this->db->where(array(
+			'kegiatan.id_kegiatan'	=> $id_kegiatan
+		));		
 		$this->db->order_by('id_kegiatan', 'DESC');
 		$query = $this->db->get();
 		return $query->row();

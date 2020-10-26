@@ -29,6 +29,8 @@ class Video extends CI_Controller {
 		// Validasi
 		$v = $this->form_validation;
 		$v->set_rules('judul_video','Video title','required');
+		$v->set_rules('keterangan', 'Video Keterangan', 'required');
+		$v->set_rules('video', 'Video', 'required');
 		
 		if($v->run()=== FALSE) {
 		$data = array(	'title'		=> 'Add Video',
@@ -44,7 +46,7 @@ class Video extends CI_Controller {
 							'id_user'		=> $this->session->userdata('id_user'),
 							);
 			$this->video_model->tambah($data);
-			$this->session->set_flashdata('sukses','Data added successfully');
+			$this->session->set_flashdata('sukses','Data video telah ditambahkan');
 			redirect(base_url('admin/video'));
 		}
 	}
@@ -56,6 +58,8 @@ class Video extends CI_Controller {
 		// Validasi
 		$v = $this->form_validation;
 		$v->set_rules('judul_video','Video title','required');
+		$v->set_rules('keterangan', 'Video Keterangan', 'required');
+		$v->set_rules('video', 'Video', 'required');
 		
 		if($v->run()=== FALSE) {
 		$data = array(	'title'		=> 'Edit Video',
@@ -73,7 +77,7 @@ class Video extends CI_Controller {
 				
 							);
 			$this->video_model->edit($data);
-			$this->session->set_flashdata('sukses','Data updated successfully');
+			$this->session->set_flashdata('sukses','Data video telah ditambahkan');
 			redirect(base_url('admin/video'));
 		}
 	}
@@ -81,10 +85,9 @@ class Video extends CI_Controller {
 	// Api Delete
 	public function delete($id_video)
 	{
-
 		$data = array('id_video'	=> $id_video);
 		$this->video_model->delete($data);
-		$this->session->set_flashdata('sukses', 'Data Video telah didelete');
+		$this->session->set_flashdata('sukses', 'Data Video telah di hapus');
 		redirect(base_url('admin/Video'));
 	}
 }

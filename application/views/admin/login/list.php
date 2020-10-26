@@ -32,7 +32,7 @@
 							<div class="col-lg-6">
 								<div class="p-5">
 									<div class="text-center">
-										<h1 class="h4 text-gray-900 mb-4">Website SMA Banjarwangi 1!</h1>
+										<h1 class="h4 text-gray-900 mb-4">Website Komunitas</h1>
 									</div>
 									<?php
 									// Notifikasi error
@@ -57,8 +57,8 @@
 										<button type="submit" class="btn btn-primary btn-block btn-lg">Login</button>
 									</div>
 									<hr>
-									<a href="index.html" class="btn btn-google btn-user btn-block">
-										<i class="fab fa-google fa-fw"></i> Login with Google
+									<a href="<?= base_url('home')?>" class="btn btn-google btn-user btn-block">
+										<i class="fab fa-google fa-fw"></i> Kembali Ke halaman Home
 									</a>
 									<a href="index.html" class="btn btn-facebook btn-user btn-block">
 										<i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
@@ -78,10 +78,10 @@
 				</div>
 
 			</div>
-
 		</div>
-
 	</div>
+
+	<!-- pesan error pada login -->
 	<?php if ($this->session->flashdata('sukses')) { ?>
 		<script>
 			swal("Berhasil", "<?php echo $this->session->flashdata('sukses'); ?>", "success")
@@ -93,6 +93,7 @@
 			swal("Oops...", "<?php echo $this->session->flashdata('warning'); ?>", "warning")
 		</script>
 	<?php } ?>
+
 	<!-- Bootstrap core JavaScript-->
 	<script src="<?php echo base_url() ?>assets/admin/vendor/jquery/jquery.min.js"></script>
 	<script src="<?php echo base_url() ?>assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

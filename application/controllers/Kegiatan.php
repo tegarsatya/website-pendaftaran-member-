@@ -64,22 +64,17 @@ class Kegiatan extends CI_Controller {
 	public function read($id_kegiatan)
 	{
 		// $kegiatan	= $this->kegiatan_model->home();
-		$listing 	= $this->kegiatan_model->listing();
-		$read		= $this->kegiatan_model->read($id_kegiatan);
-		$kegiatan	= $this->kegiatan_model->listing();
+		$kegiatan		= $this->kegiatan_model->read($id_kegiatan);
 
 		$data	= array(
-			'title'			=> $read->judul_kegiatan,
-			'keywords'		=> $read->judul_kegiatan,
-			'listing'		=> $listing,
-			'kegiatan'		=> $kegiatan,
-			'read'			=> $read,
-			'isi'			=> 'kegiatan/read'
+			'title'				=> $kegiatan->judul_kegiatan,
+			'keywords' 			=> $kegiatan->judul_kegiatan,
+			'kegiatan'			=> $kegiatan,
+			'isi'				=> 'kegiatan/read'
 		);
 		$this->load->view('layout/wrapper', $data);
+
 	}
-
-
 }
 
 /* End of file Kegiatan.php */

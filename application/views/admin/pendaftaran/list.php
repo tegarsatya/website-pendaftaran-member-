@@ -41,9 +41,9 @@ echo form_open(base_url('admin/pendaftaran/proses'));
 									<input type="checkbox" name="id_pendaftaran[]" value="<?php echo $pen->id_pendaftaran ?>">
 								</td>
 								<td><?php echo $pen->nama ?></td>
-								<td><?php echo $pen->pesan ?></td>
+								<td><?php echo $pen->alamat ?></td>
 								<td><?php echo $pen->plat_nomor?></td>
-								<td><?php echo $kon->nomor_telepon ?></td>
+								<td><?php echo $pen->nomor_telepon ?></td>
 								<td>
 									<div class="btn-group">
 										<a href="<?php echo base_url('admin/pendaftaran/delete/' . $pen->id_pendaftaran) ?>" class="btn btn-danger btn-sm" onclick="confirmation(event)"><i class="fa fa-trash"></i> Hapus</a>

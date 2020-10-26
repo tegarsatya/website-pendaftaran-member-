@@ -8,14 +8,14 @@
  			<div class="col-md-8">
  				<?php foreach ($redaksi as $re) { ?>
  					<div class="blog-item">
- 						<a href="#"><img src="<?php echo base_url('assets/upload/redaksi/' . $re->gambar) ?>" width="100%" alt="" /></a>
+ 						<a href="#"><img src="<?php echo base_url('assets/upload/redaksi/'.$re->gambar) ?>" width="100%" alt="" /></a>
  						<div class="blog-content">
  							<a href="#" class="blog_cat"></a>
- 							<h2><a href="<?php echo base_url('redaksi/read/' . $re->slug_redaksi) ?>"><?php echo $re->nama_redaksi ?></a></h2>
+ 							<h2><a href="<?php echo base_url('redaksi/read/'.$re->slug_redaksi) ?>"><?php echo $re->nama_redaksi ?></a></h2>
  							<h3><?php echo $re->tanggal ?> - <?php echo $re->nama ?> </h3>
  							<h4><?php echo character_limiter(strip_tags($re->keterangan), 100); ?></h4>
  							<br>
- 							<a class=" readmore" href="<?php echo base_url('redaksi/read/' . $re->slug_redaksi) ?>">Read More <i class="fa fa-long-arrow-right"></i></a>
+ 							<a class=" readmore" href="<?php echo base_url('redaksi/read/'.$re->slug_redaksi) ?>">Read More <i class="fa fa-long-arrow-right"></i></a>
  						</div>
  					</div>
  				<?php } ?>

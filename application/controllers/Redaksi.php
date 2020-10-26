@@ -85,16 +85,16 @@ class Redaksi extends CI_Controller {
 	public function read($slug_redaksi)
 	{
 
-		$redaksi	= $this->redaksi_model->home();
-		$read		= $this->redaksi_model->read($slug_redaksi);
-		$kategori	= $this->kategori_redaksi_model->listing();
+		// $redaksi	= $this->redaksi_model->home();
+		$redaksi		= $this->redaksi_model->read($slug_redaksi);
+		$kategori		= $this->kategori_redaksi_model->listing();
 
 		$data	= array(
-			'title'				=> $read->nama_redaksi,
-			'keywords' 			=> $read->nama_redaksi,
+			'title'				=> $redaksi->nama_redaksi,
+			'keywords' 			=> $redaksi->nama_redaksi,
 			'redaksi'			=> $redaksi,
 			'kategori_redaksi'	=> $kategori,
-			'read'				=> $read,
+			// 'read'				=> $read,
 			'isi'				=> 'redaksi/read'
 		);
 		$this->load->view('layout/wrapper', $data);

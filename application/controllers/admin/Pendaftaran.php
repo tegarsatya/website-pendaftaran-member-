@@ -22,8 +22,7 @@ class Pendaftaran extends CI_Controller {
 	public function index()
 	{
 		$pendaftaran	= $this->pendaftaran_model->listing();
-		// $total 	= $this->user_model->total();
-
+		
 		$data = array(
 			'title'			=> 'Data Pendaftaran Member (' . count($pendaftaran) . ')',
 			'pendaftaran'	=> $pendaftaran,
@@ -35,7 +34,7 @@ class Pendaftaran extends CI_Controller {
 	public function delete($id_pendaftaran)
 	{
 		$data = array('id_pendaftaran'	=> $id_pendaftaran);
-		$this->Pendaftaran_model->delete($data);
+		$this->pendaftaran_model->delete($data);
 		$this->session->set_flashdata('sukses', 'Data Pendaftaran telah di hapus');
 		redirect(base_url('admin/pendaftaran'));
 	}

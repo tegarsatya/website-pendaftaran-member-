@@ -49,7 +49,6 @@ class Kategori extends CI_Controller {
 			)
 		);
 
-
 		if ($valid->run() === FALSE) {
 			// End validasi
 
@@ -61,7 +60,7 @@ class Kategori extends CI_Controller {
 
 			$this->load->view('admin/layout/wrapper', $data, FALSE);
 
-			// Proses masuk ke database
+		// Proses masuk ke database
 		} else {
 
 			$i 	= $this->input;
@@ -74,7 +73,7 @@ class Kategori extends CI_Controller {
 			);
 			$this->kategori_redaksi_model->tambah($data);
 
-			$this->session->set_flashdata('sukses', 'Data telah ditambah');
+			$this->session->set_flashdata('sukses', 'Data Kategori Redaksi telah ditambahkan');
 
 			redirect(base_url('admin/kategori'), 'refresh');
 		}
@@ -124,8 +123,8 @@ class Kategori extends CI_Controller {
 	{
 
 		$data = array('id_kategori_redaksi'	=> $id_kategori_redaksi);
-		$this->kategori_model->delete($data);
-		$this->session->set_flashdata('sukses', 'Kategori Redaksi telah didelete');
+		$this->kategori_redaksi_model->delete($data);
+		$this->session->set_flashdata('sukses', 'Kategori Redaksi telah di hapus');
 		redirect(base_url('admin/kategori'));
 	}
 

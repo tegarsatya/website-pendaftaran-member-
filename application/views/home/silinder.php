@@ -12,7 +12,7 @@
 					<div class="row">
 						<div class="col-md-7">
 							<div class="carousel-content">
-								<h1 class="animation animated-item-1">Help Finding Information Online</h1>
+								<h1 class="animation animated-item-1">HONDA JAZZ SOCIETY BEKASI</h1>
 								<div class="animation animated-item-2">
 									Every new computer that’s brought home from the store has an operating system installed onto it.
 								</div>
@@ -31,7 +31,7 @@
 					<div class="row">
 						<div class="col-md-7">
 							<div class="carousel-content">
-								<h1 class="animation animated-item-1">Help Finding Information Online</h1>
+								<h1 class="animation animated-item-1">HONDA JAZZ SOCIETY BEKASI</h1>
 								<div class="animation animated-item-2">
 									Every new computer that’s brought home from the store has an operating system installed onto it.
 								</div>
@@ -39,8 +39,6 @@
 								<a class="btn-slide animation animated-item-3" href="#">Get Started</a>
 							</div>
 						</div>
-
-
 					</div>
 				</div>
 			</div>

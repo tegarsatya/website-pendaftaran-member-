@@ -8,13 +8,12 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="blog-item">
-					<?php foreach ($kegiatan as $ke) { ?>
-						<a href="#"><img class="img-responsive img-blog" src="<?php echo base_url('assets/upload/kegiatan/' . $ke->gambar) ?>" width="75%" alt="" /></a>
+						<a href="#"><img class="img-responsive img-blog" src="<?php echo base_url('assets/upload/kegiatan/' . $kegiatan->gambar) ?>" width="75%" alt="" /></a>
 						<div class="blog-content">
-							<a href="#" class="blog_cat"><?php echo $ke->judul_kegiatan ?></a>
-							<h2><a href="blog-item.html"><?php echo $ke->keterangan ?></a></h2>
+							<a href="#" class="blog_cat"><?php echo $kegiatan->judul_kegiatan ?></a>
+							<h2><a href="blog-item.html"><?php echo $kegiatan->keterangan ?></a></h2>
 							<div class="post-meta">
-								<p><i class="fa fa-clock-o"></i> <a href="#"><?php echo $ke->tanggal ?></a></p>
+								<p><i class="fa fa-clock-o"></i> <a href="#"><?php echo $kegiatan->tanggal ?></a></p>
 								<p>
 									share:
 									<a href="#" class="fa fa-facebook"></a>
@@ -31,7 +30,6 @@
 								</div>
 							</div>
 						</div>
-					<?php } ?>
 				</div>
 			</div>
 		</div>

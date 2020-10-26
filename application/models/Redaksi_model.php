@@ -34,7 +34,9 @@ class Redaksi_model extends CI_Model
 		$this->db->join('kategori_redaksi', 'kategori_redaksi.id_kategori_redaksi = redaksi.id_kategori_redaksi', 'LEFT');
 		$this->db->join('users', 'users.id_user = redaksi.id_user', 'LEFT');
 		// End join
-		$this->db->where('slug_redaksi',$slug_redaksi);
+		$this->db->where(array('status_redaksi'		=> 'Publish',
+								'redaksi.slug_redaksi'	=> $slug_redaksi));	
+		// $this->db->where('redaksi.slug_redaksi',$slug_redaksi);
 		$this->db->order_by('id_redaksi', 'DESC');
 		$query = $this->db->get();
 		return $query->row();

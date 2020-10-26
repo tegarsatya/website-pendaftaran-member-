@@ -44,7 +44,7 @@ class Galeri extends CI_Controller {
 			'isi',
 			'isi Galeri',
 			'required',
-			array('required'		=> 'isi berita harus diisi')
+			array('required'		=> 'isi Galeri harus diisi')
 		);
 
 		if ($v->run()) {
@@ -90,7 +90,7 @@ class Galeri extends CI_Controller {
 				);
 
 				$this->galeri_model->tambah($data);
-				$this->session->set_flashdata('sukses', 'Data Galeri telah ditambah');
+				$this->session->set_flashdata('sukses', 'Data Galeri telah ditambahkan');
 				redirect(base_url('admin/galeri'));
 			}
 		}
@@ -156,16 +156,7 @@ class Galeri extends CI_Controller {
 					$this->load->library('image_lib', $config);
 					$this->image_lib->resize();
 
-					// Proses hapus gambar
-					// if ($galeri->gambar != "") {
-					// 	unlink('./assets/upload/' . $galeri->gambar);
-					// 	unlink('./assets/upload/galeri/' . $galeri->gambar);
-					
-					// }
-					// End hapus gambar
-
 					$i 		= $this->input;
-
 					$data = array(
 						'id_galeri'			=> $id_galeri,
 						'id_user'			=> $this->session->userdata('id_user'),
@@ -186,7 +177,7 @@ class Galeri extends CI_Controller {
 					// 'gambar'			=> $upload_data['uploads']['file_name'],
 				);
 				$this->galeri_model->edit($data);
-				$this->session->set_flashdata('sukses', 'Data telah diedit');
+				$this->session->set_flashdata('sukses', 'Data galeri telah diedit');
 				redirect(base_url('admin/galeri'), 'refresh');
 			}
 		}
@@ -206,7 +197,7 @@ class Galeri extends CI_Controller {
 
 		$data = array('id_galeri'	=> $id_galeri);
 		$this->galeri_model->delete($data);
-		$this->session->set_flashdata('sukses', 'Data Galeri telah didelete');
+		$this->session->set_flashdata('sukses', 'Data Galeri telah Hapus');
 		redirect(base_url('admin/galeri'));
 	}
 

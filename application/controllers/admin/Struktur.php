@@ -90,7 +90,7 @@ class Struktur extends CI_Controller
 				);
 
 				$this->struktur_model->tambah($data);
-				$this->session->set_flashdata('sukses', 'Struktur telah ditambah');
+				$this->session->set_flashdata('sukses', 'data Struktur telah ditambahkan');
 				redirect(base_url('admin/struktur'));
 			}
 		}
@@ -165,7 +165,7 @@ class Struktur extends CI_Controller
 						'gambar'				=> $upload_data['uploads']['file_name'],
 					);
 					$this->struktur_model->edit($data);
-					$this->session->set_flashdata('sukses', 'Data telah diedit');
+					$this->session->set_flashdata('sukses', 'Data struktur telah diedit');
 					redirect(base_url('admin/struktur'), 'refresh');
 				}
 			} else {
@@ -196,10 +196,9 @@ class Struktur extends CI_Controller
 	// Delete
 	public function delete($id_struktur)
 	{
-
 		$data = array('id_struktur'	=> $id_struktur);
 		$this->struktur_model->delete($data);
-		$this->session->set_flashdata('sukses', 'Data Struktur telah didelete');
+		$this->session->set_flashdata('sukses', 'Data Struktur telah di hapus');
 		redirect(base_url('admin/struktur'));
 	}
 }

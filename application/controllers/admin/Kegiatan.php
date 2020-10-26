@@ -20,7 +20,6 @@ class Kegiatan extends CI_Controller {
 	public function index()
 	{
 		$kegiatan 	= $this->kegiatan_model->listing();
-		// $total 	= $this->user_model->total();
 
 		$data = array(
 			'title'		=> 'Data Kegiatan Komunitas Honda Jazz (' . count($kegiatan) . ')',
@@ -95,7 +94,7 @@ class Kegiatan extends CI_Controller {
 				);
 
 				$this->kegiatan_model->tambah($data);
-				$this->session->set_flashdata('sukses', 'Kegiatan telah ditambah');
+				$this->session->set_flashdata('sukses', 'data Kegiatan telah ditambahkan');
 				redirect(base_url('admin/kegiatan'));
 			}
 		}
@@ -178,7 +177,7 @@ class Kegiatan extends CI_Controller {
 						'gambar'				=> $upload_data['uploads']['file_name'],
 					);
 					$this->kegiatan_model->edit($data);
-					$this->session->set_flashdata('sukses', 'Data telah diedit');
+					$this->session->set_flashdata('sukses', 'Data kegiatan telah diedit');
 					redirect(base_url('admin/kegiatan'), 'refresh');
 				}
 			} else {
@@ -191,7 +190,7 @@ class Kegiatan extends CI_Controller {
 					'keterangan'			=> $i->post('keterangan'),
 				);
 				$this->kegiatan_model->edit($data);
-				$this->session->set_flashdata('sukses', 'Data telah diedit');
+				$this->session->set_flashdata('sukses', 'Data kegiatan telah diedit');
 				redirect(base_url('admin/kegiatan'), 'refresh');
 			}
 		}
@@ -208,10 +207,9 @@ class Kegiatan extends CI_Controller {
 	// Delete
 	public function delete($id_kegiatan)
 	{
-
 		$data = array('id_kegiatan'	=> $id_kegiatan);
 		$this->kegiatan_model->delete($data);
-		$this->session->set_flashdata('sukses', 'Data Struktur telah didelete');
+		$this->session->set_flashdata('sukses', 'Data Kegiatan telah di hapus');
 		redirect(base_url('admin/kegiatan'));
 	}
 }

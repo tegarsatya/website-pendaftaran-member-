@@ -83,7 +83,7 @@ class User extends CI_Controller {
 			);
 			$this->user_model->tambah($data);
 
-			$this->session->set_flashdata('sukses', 'Data telah ditambahkan');
+			$this->session->set_flashdata('sukses', 'Data pengguna sistem telah ditambahkan');
 
 			redirect(base_url('admin/user'), 'refresh');
 		}
@@ -93,7 +93,6 @@ class User extends CI_Controller {
 	// Edit
 	public function edit($id_user)
 	{
-
 		// Ambil data user yg akan diedit
 		$user 		= $this->user_model->detail($id_user);
 
@@ -138,15 +137,12 @@ class User extends CI_Controller {
 			);
 
 			$this->user_model->edit($data);
-			$this->session->set_flashdata('sukses', 'Data telah diupdate');
+			$this->session->set_flashdata('sukses', 'Data telah di edit');
 			redirect(base_url('admin/user'), 'refresh');
 
 		}
 		// End masuk database
 	}
-
-
-	
 
 	// Proses
 	public function proses()

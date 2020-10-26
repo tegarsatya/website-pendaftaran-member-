@@ -23,10 +23,10 @@
 						?>
  					<div id="data">
  						<div style="border: 1px solid black;">
- 							<img src="gambar/1.jpg" width="1105" height="100">
+ 							<img src="<?php echo base_url() ?>assets/frontend/images/IMG-20200215-WA0028.jpg" width="800px" height="400px" style="display: block; margin: auto;">
  							<center>
  								<h1>Komunitas Mobil Honda Jazz </h1>
- 								<h5>Bekasi 
+ 								<h5>Bekasi
  									Jawa Barat </h5>
  							</center>
  						</div>
