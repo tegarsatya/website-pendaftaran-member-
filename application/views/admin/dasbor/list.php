@@ -1,10 +1,121 @@
 <div class="container-fluid">
 
 	<!-- Page Heading -->
-	<h1 class="h3 mb-2 text-gray-800"><?php echo $title ?></h1>
-	<p class="mb-4"> HALAMAN ADMIN WEBSITE HONDA JAZZ SOCIETY BEKASI <a target="_blank" href="<?php echo base_url('home') ?>">Kembali Kehalaman Website</a>.</p>
+	<div class="d-sm-flex align-items-center justify-content-between mb-4">
+		<h1 class="h3 mb-0 text-gray-800">Halaman Dhasboard Admin Komunitas Mobil Honda Jazz Society</h1>
+	</div>
 
+	<div class="row">
+		<div class="col-xl-3 col-md-6 mb-4">
+			<div class="card border-left-primary shadow h-100 py-2">
+				<div class="card-body">
+					<div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Redaksi</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800">Data Redaksi : <?php echo $this->dasbor_model->redaksi()->total; ?></div>
+						</div>
+						<div class="col-auto">
+							<i class="fas fa-calendar fa-2x text-gray-300"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
+		<div class="col-xl-3 col-md-6 mb-4">
+			<div class="card border-left-success shadow h-100 py-2">
+				<div class="card-body">
+					<div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Pendaftaran</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800">Pendaftaran : <?php echo $this->dasbor_model->pendaftaran()->total; ?></div>
+						</div>
+						<div class="col-auto">
+							<i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
+		<!-- Earnings (Monthly) Card Example -->
+		<div class="col-xl-3 col-md-6 mb-4">
+			<div class="card border-left-info shadow h-100 py-2">
+				<div class="card-body">
+					<div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Data Galeri</div>
+							<div class="row no-gutters align-items-center">
+								<div class="col-auto">
+									<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Data Galeri : <?php echo $this->dasbor_model->galeri()->total; ?></div>
+								</div>
+								<div class="col">
+									<div class="progress progress-sm mr-2">
+										<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-auto">
+							<i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Pending Requests Card Example -->
+		<div class="col-xl-3 col-md-6 mb-4">
+			<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card-body">
+					<div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Kontak</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800">Data Kontak : <?php echo $this->dasbor_model->kontak()->total; ?></div>
+						</div>
+						<div class="col-auto">
+							<i class="fas fa-comments fa-2x text-gray-300"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-3 col-md-6 mb-4">
+			<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card-body">
+					<div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Video</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800">Data Video : <?php echo $this->dasbor_model->video()->total; ?></div>
+						</div>
+						<div class="col-auto">
+							<i class="fas fa-comments fa-2x text-gray-300"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-3 col-md-6 mb-4">
+			<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card-body">
+					<div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Kegiatan</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800">Data Kegiatan : <?php echo $this->dasbor_model->kegiatan()->total; ?></div>
+						</div>
+						<div class="col-auto">
+							<i class="fas fa-comments fa-2x text-gray-300"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
 </div>
 <!-- /.container-fluid -->
+
+
+<!-- End of Page Wrapper -->

@@ -109,8 +109,8 @@ $awal = $sek - 100;
 				}
 			});
 	}
-	// Akses
-	// Sweet alert
+
+	// Akses Sweet alert
 	function akses(ev) {
 		ev.preventDefault();
 		var urlToRedirect = ev.currentTarget.getAttribute('href'); //use currentTarget because the click may be on the nested i tag and not a tag causing the href to be empty
@@ -127,6 +127,7 @@ $awal = $sek - 100;
 				if (willDelete) {
 					// Proses ke URL
 					window.location.href = urlToRedirect;
+
 				}
 			});
 	}

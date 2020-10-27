@@ -13,6 +13,13 @@ class Dasbor extends CI_Controller {
 		$pengalihan 	= $this->session->set_userdata('pengalihan', $url_pengalihan);
 		// Ambil check login dari simple_login
 		$this->simple_login->check_login($pengalihan);
+		$this->load->model('pendaftaran_model');
+		$this->load->model('kegiatan_model');
+		$this->load->model('redaksi_model');
+		$this->load->model('video_model');
+		// $this->load->model('geleri_model');
+		$this->load->model('kontak_model');
+		$this->load->model('dasbor_model');
 	}
 
 	// Halaman dasbor

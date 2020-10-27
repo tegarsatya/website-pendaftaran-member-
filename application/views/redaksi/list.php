@@ -8,14 +8,14 @@
  			<div class="col-md-8">
  				<?php foreach ($redaksi as $re) { ?>
  					<div class="blog-item">
- 						<a href="#"><img src="<?php echo base_url('assets/upload/redaksi/'.$re->gambar) ?>" width="100%" alt="" /></a>
+ 						<a href="#"><img src="<?php echo base_url('assets/upload/redaksi/' . $re->gambar) ?>" width="100%" alt="" /></a>
  						<div class="blog-content">
  							<a href="#" class="blog_cat"></a>
- 							<h2><a href="<?php echo base_url('redaksi/read/'.$re->slug_redaksi) ?>"><?php echo $re->nama_redaksi ?></a></h2>
+ 							<h2><a href="<?php echo base_url('redaksi/read/' . $re->slug_redaksi) ?>"><?php echo $re->nama_redaksi ?></a></h2>
  							<h3><?php echo $re->tanggal ?> - <?php echo $re->nama ?> </h3>
  							<h4><?php echo character_limiter(strip_tags($re->keterangan), 100); ?></h4>
  							<br>
- 							<a class=" readmore" href="<?php echo base_url('redaksi/read/'.$re->slug_redaksi) ?>">Read More <i class="fa fa-long-arrow-right"></i></a>
+ 							<a class=" readmore" href="<?php echo base_url('redaksi/read/' . $re->slug_redaksi) ?>">Read More <i class="fa fa-long-arrow-right"></i></a>
  						</div>
  					</div>
  				<?php } ?>
@@ -33,14 +33,63 @@
  				<div class="widget archieve">
  					<h3>Kategory</h3>
  					<div class="row">
- 						<?php foreach  ($kategori_redaksi as $ka) { ?>
+ 						<?php foreach ($kategori_redaksi as $ka) { ?>
  							<div class="col-sm-12">
  								<ul class="blog_archieve">
- 									<li><a href="<?php echo base_url('redaksi/kategori/' . $ka->slug_redaksi) ?>"><?php echo $ka->nama_redaksi ?><span class="pull-right">(97)</span></a></li>
+ 									<li><a href="<?php echo base_url('redaksi/kategori/' . $ka->slug_redaksi) ?>"><?php echo $ka->nama_redaksi ?></a></li>
  								</ul>
  							</div>
  						<?php } ?>
  					</div>
+ 				</div>
+ 				<div class="widget popular_post">
+ 					<h3>Popular Post</h3>
+ 					<ul>
+ 						<li>
+ 							<a href="#">
+ 								<img src="<?php echo base_url() ?>assets/frontend/images/post1.png" alt="">
+ 								<p>Can you get free games for you</p>
+ 							</a>
+ 						</li>
+ 						<li>
+ 							<a href="#">
+ 								<img src="<?php echo base_url() ?>assets/frontend/images/post2.png" alt="">
+ 								<p>Can you get free games for you</p>
+ 							</a>
+ 						</li>
+ 						<li>
+ 							<a href="#">
+ 								<img src="<?php echo base_url() ?>assets/frontend/images/post3.png" alt="">
+ 								<p>Can you get free games for you</p>
+ 							</a>
+ 						</li>
+ 					</ul>
+ 				</div>
+ 				<!--/.archieve-->
+
+
+ 				<div class="widget blog_gallery">
+ 					<h3>Our Gallery</h3>
+ 					<ul class="sidebar-gallery clearfix">
+ 						<li>
+ 							<a href="#"><img src="<?php echo base_url() ?>assets/frontend/images/sidebar-g-1.png" alt="" /></a>
+ 						</li>
+ 						<li>
+ 							<a href="#"><img src="<?php echo base_url() ?>assets/frontend/images/sidebar-g-2.png" alt="" /></a>
+ 						</li>
+ 						<li>
+ 							<a href="#"><img src="<?php echo base_url() ?>assets/frontend/images/sidebar-g-3.png" alt="" /></a>
+ 						</li>
+ 						<li>
+ 							<a href="#"><img src="<?php echo base_url() ?>assets/frontend/images/sidebar-g-4.png" alt="" /></a>
+ 						</li>
+ 						<li>
+ 							<a href="#"><img src="<?php echo base_url() ?>assets/frontend/images/sidebar-g-5.png" alt="" /></a>
+ 						</li>
+ 						<li>
+ 							<a href="#"><img src="<?php echo base_url() ?>assets/frontend/images/sidebar-g-6.png" alt="" /></a>
+ 						</li>
+ 					</ul>
  				</div>
 
  				<div class="widget social_icon">
@@ -50,8 +99,11 @@
  					<a href="#" class="fa fa-pinterest"></a>
  					<a href="#" class="fa fa-github"></a>
  				</div>
+
  			</aside>
  		</div>
+
+
  		<!--/.row-->
  		<div class="row">
  			<div class="col-md-12 text-center">
@@ -81,7 +133,7 @@
  		<div class="row">
  			<div class="col-md-2">
  				<a href="#" class="footer-logo">
- 					<img src="images/logo-black.png" alt="logo">
+ 					<img src="<?php echo base_url() ?>assets/frontend/images/logo-black.png" alt="logo">
  				</a>
  			</div>
  			<div class="col-md-10">
